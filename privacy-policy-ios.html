@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DomashnoAI за iOS - Политика за поверителност / Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        h1 { color: #1565C0; }
+        h2 { color: #0D47A1; margin-top: 30px; }
+        p, li { font-size: 16px; }
+        .updated { color: #666; font-style: italic; }
+        hr { margin: 48px 0; border: 0; border-top: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+
+<p><a href="#en">English version</a></p>
+
+<h1>Политика за поверителност (iOS)</h1>
+<p class="updated">Последна промяна: 25 ноември 2026 г.</p>
+
+<p>Тази политика се отнася за версията на DomashnoAI за iOS. DomashnoAI е образователно приложение за iPhone, което генерира упражнения за ученици от 1. до 12. клас по учебните програми на МОН. Предназначено е да се ползва от родители и настойници. Политиката описва какви данни се обработват, защо, от кого и за колко време. Администратор е разработчикът на DomashnoAI (контакт в края).</p>
+
+<h2>1. Данни, които остават на устройството</h2>
+<ul>
+    <li>Име и клас на децата, които добавяте.</li>
+    <li>Упражненията, въведените отговори, резултатите и напредъкът.</li>
+</ul>
+<p>Тези данни не се изпращат на нашия сървър. Приложението не ги синхронизира с iCloud. Ако обаче правите резервно копие на телефона (iCloud Backup или на компютър), те влизат в него и могат да бъдат възстановени от него, например на нов iPhone. PDF файл напуска приложението само ако вие го споделите. Напомнянията се създават на самото устройство.</p>
+
+<h2>2. Данни, които се изпращат на сървъра</h2>
+
+<h3>2.1 Какво изпраща приложението</h3>
+<p>При генериране на упражнение:</p>
+<ul>
+    <li>Идентификатор на устройството: случаен идентификатор, създаден от приложението и пазен в Keychain. Той може да остане и след изтриване на приложението.</li>
+    <li>Клас, предмет, брой задачи, трудност и вид изпит (при пробен изпит).</li>
+    <li>До три кратки теми от грешно решени задачи. Взимат се от текста на генерираните от AI задачи, не от отговорите на детето.</li>
+</ul>
+<p>Идентификаторът на устройството се изпраща и при стартиране на приложението, за да се покаже балансът. При покупка се изпращат идентификаторът и подписаните от Apple данни за транзакцията (например продукт, номер на транзакцията, дата, цена и държава на магазина). Сървърът ги проверява и от тях пази само номера, пакета и дали покупката е тестова.</p>
+<p>Имената на децата и техните отговори не се изпращат.</p>
+
+<h3>2.2 Какво пазим</h3>
+<ul>
+    <li><strong>Баланс:</strong> идентификаторът на устройството, броят токени, дати на създаване и промяна, броячи на генерираните упражнения и списък с до 20 последно подадени резервни упражнения (час и клас, предмет, трудност, брой и тема от учебната програма, а за пробен изпит само вида му).</li>
+    <li><strong>Покупки:</strong> идентификатор на устройството, закупен пакет, брой токени, номер на транзакцията и неговият хеш, платформа, дата и дали покупката е тестова.</li>
+    <li><strong>Технически дневници:</strong> идентификатор на устройството, IP адрес, данни за приложението, изпратило заявката (user agent), параметрите на заявката, промени в баланса и грешки, понякога с откъс от отговора на AI.</li>
+    <li><strong>Копия на упражнения:</strong> генерирани задачи без връзка с устройство, които се подават, когато ново генериране не успее.</li>
+</ul>
+
+<h3>2.3 Анонимно влизане</h3>
+<p>Не се изисква регистрация. Приложението влиза анонимно чрез Firebase Authentication, който създава случаен идентификатор и обработва техническа информация като IP адрес и user agent.</p>
+
+<h2>3. Статистика за ползването</h2>
+<p>Ползваме Google Analytics for Firebase. Записват се събития като отворени екрани, преминаване през въведението, добавяне на профил (без името и класа), отваряне на екрана за покупки, опити и резултати от покупки (пакет и цена) и неуспешни генерирания, както и дали известията са разрешени. Услугата събира и идентификатор на инсталацията, идентификатор на доставчика (IDFV), модел на устройството, версия на операционната система, език и приблизително местоположение. Приложението не показва реклами и не иска разрешение за проследяване. Не свързваме данните от iOS приложението с Google Ads и не ги ползваме за реклама. Използваме ги, за да разберем кое не работи и да подобрим приложението.</p>
+
+<h2>4. Доставчици, на които се предават данни</h2>
+<ul>
+    <li><strong>Google Firebase и Google Cloud</strong> (вход, база данни, сървърни функции, дневници, статистика): <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+    <li><strong>Google Gemini API</strong> (генериране на задачите). Получава клас, предмет, брой, трудност, текущата дата, извадка от учебната програма и темите от точка 2.1. Не получава идентификатора на устройството, нито имена. <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li><strong>Apple App Store</strong> (плащания): <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+</ul>
+<p>Плащанията се обработват от Apple. Не получаваме данни за банкови карти. Не продаваме данни. Базата данни и сървърните функции са в Европейския съюз. Анонимното влизане (Firebase Authentication) се обработва в САЩ. Останалите услуги също може да обработват данни извън Европейския съюз.</p>
+
+<h2>5. Основания за обработката</h2>
+<ul>
+    <li>Изпълнение на услугата, която ползвате: генериране на упражнения, баланс и покупки.</li>
+    <li>Легитимен интерес: сигурност, предотвратяване на злоупотреби, отстраняване на грешки и статистика за ползването.</li>
+</ul>
+
+<h2>6. Срокове за съхранение</h2>
+<ul>
+    <li>Данни на устройството: докато ги изтриете или деинсталирате приложението (резервни копия се управляват от настройките на телефона).</li>
+    <li>Баланс и покупки: докато услугата работи или докато поискате изтриване, освен ако закон изисква по-дълъг срок.</li>
+    <li>Анонимен вход: записът се пази, докато не бъде изтрит; след изтриване Google го премахва от системите си до 180 дни. IP адресите при вход Google пази няколко седмици.</li>
+    <li>Технически дневници: 30 дни.</li>
+    <li>Копия на упражнения: до около три седмици.</li>
+    <li>Статистика: най-много 14 месеца за данните, свързани с отделни инсталации. Обобщените справки могат да се пазят по-дълго.</li>
+</ul>
+
+<h2>7. Изтриване и вашите права</h2>
+<ul>
+    <li>Можете да изтриете детски профил заедно с историята му от самото приложение.</li>
+    <li>За изтриване на данните на сървъра пишете на имейла по-долу. Ако сте купували токени, посочете номера на поръчката, датата и пакета от разписката на Apple. Без тях може да не успеем да открием записа, защото не знаем кой сте. Изтриването на баланса премахва и неизползваните токени.</li>
+    <li>Имате право на достъп, поправка, изтриване, ограничаване, преносимост и възражение срещу обработката. Можете да спрете събирането на данни, като деинсталирате приложението.</li>
+    <li>Имате право на жалба до Комисията за защита на личните данни: <a href="https://cpdp.bg">cpdp.bg</a></li>
+</ul>
+
+<h2>8. Деца</h2>
+<p>Приложението е предназначено да се ползва от родител или настойник. Няма регистрация, реклами, чат или публикуване на съдържание. Ако смятате, че сме получили лични данни на дете, пишете ни и ще ги изтрием.</p>
+
+<h2>9. Сигурност</h2>
+<p>Връзката със сървъра е криптирана (HTTPS). Балансът може да се променя само от сървъра. Никоя система не е напълно защитена.</p>
+
+<h2>10. Съдържание, генерирано от AI</h2>
+<p>Задачите, отговорите и обясненията се генерират от изкуствен интелект и може да съдържат грешки. Препоръчваме родител да ги проверява.</p>
+
+<h2>11. Промени и контакт</h2>
+<p>При промяна обновяваме датата в началото.<br><strong>Имейл:</strong> <a href="mailto:svilenkirchev2@gmail.com">svilenkirchev2@gmail.com</a></p>
+
+<hr>
+
+<div lang="en" id="en">
+
+<h1>Privacy Policy (iOS)</h1>
+<p class="updated">Last updated: November 25, 2026</p>
+
+<p>This policy applies to the iOS version of DomashnoAI. DomashnoAI is an educational app for iPhone that generates exercises for students in grades 1-12 following the Bulgarian national curriculum. It is meant to be used by parents and guardians. This policy explains what data is processed, why, by whom and for how long. The data controller is the developer of DomashnoAI (contact below).</p>
+
+<h2>1. Data that stays on your device</h2>
+<ul>
+    <li>The names and grades of the children you add.</li>
+    <li>Worksheets, typed answers, results and progress.</li>
+</ul>
+<p>This data is not sent to our server. The app does not sync it with iCloud. However, if you back up your phone (iCloud Backup or to a computer), it is included in the backup and can be restored from it, for example on a new iPhone. A PDF leaves the app only if you share it. Reminders are created on the device.</p>
+
+<h2>2. Data sent to our server</h2>
+
+<h3>2.1 What the app sends</h3>
+<p>When you generate an exercise:</p>
+<ul>
+    <li>A device identifier: a random identifier created by the app and kept in the Keychain. It may survive deleting the app.</li>
+    <li>Grade, subject, number of questions, difficulty and exam type (for mock exams).</li>
+    <li>Up to three short topics from questions answered incorrectly. They are taken from the text of the AI-generated questions, not from the child's answers.</li>
+</ul>
+<p>The device identifier is also sent when the app starts, to show the balance. On a purchase, the app sends the identifier and the transaction data signed by Apple (for example product, transaction number, date, price and store country). The server verifies it and keeps from it only the number, the package and whether it was a test purchase.</p>
+<p>Children's names and answers are not sent.</p>
+
+<h3>2.2 What we keep</h3>
+<ul>
+    <li><strong>Balance:</strong> device identifier, token count, creation and update dates, counters of generated worksheets, and a list of up to 20 recently served backup worksheets (time, and grade, subject, difficulty, size and curriculum topic, or only the exam type for a mock exam).</li>
+    <li><strong>Purchases:</strong> device identifier, package, token count, transaction number and its hash, platform, date and whether it was a test purchase.</li>
+    <li><strong>Technical logs:</strong> device identifier, IP address, details of the requesting app (user agent), request parameters, balance changes and errors, sometimes with an excerpt of the AI response.</li>
+    <li><strong>Worksheet copies:</strong> generated questions, not linked to any device, served when a new generation fails.</li>
+</ul>
+
+<h3>2.3 Anonymous sign-in</h3>
+<p>No registration is required. The app signs in anonymously with Firebase Authentication, which creates a random identifier and processes technical information such as the IP address and user agent.</p>
+
+<h2>3. Usage statistics</h2>
+<p>We use Google Analytics for Firebase. It records events such as screens opened, onboarding steps, adding a profile (without name or grade), opening the purchase screen, purchase attempts and results (package and price), and failed generations, as well as whether notifications are allowed. It also collects an installation identifier, the identifier for vendor (IDFV), device model, operating system version, language and approximate location. The app shows no ads and does not ask for tracking permission. We do not link data from the iOS app to Google Ads and do not use it for advertising. We use it to find what does not work and to improve the app.</p>
+
+<h2>4. Providers that receive data</h2>
+<ul>
+    <li><strong>Google Firebase and Google Cloud</strong> (sign-in, database, server functions, logs, statistics): <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></li>
+    <li><strong>Google Gemini API</strong> (question generation). It receives grade, subject, number, difficulty, the current date, a curriculum excerpt and the topics from section 2.1. It receives neither the device identifier nor any names. <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li><strong>Apple App Store</strong> (payments): <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+</ul>
+<p>Payments are processed by Apple. We never receive card details. We do not sell data. The database and server functions are in the European Union. Anonymous sign-in (Firebase Authentication) is processed in the United States. Other services may also process data outside the European Union.</p>
+
+<h2>5. Legal bases</h2>
+<ul>
+    <li>Providing the service you use: generating exercises, balance and purchases.</li>
+    <li>Legitimate interest: security, abuse prevention, troubleshooting and usage statistics.</li>
+</ul>
+
+<h2>6. Retention</h2>
+<ul>
+    <li>Data on the device: until you delete it or uninstall the app (backups follow your phone settings).</li>
+    <li>Balance and purchases: while the service operates or until you request deletion, unless the law requires longer.</li>
+    <li>Anonymous sign-in: the record is kept until it is deleted; after deletion Google removes it from its systems within 180 days. Google keeps sign-in IP addresses for a few weeks.</li>
+    <li>Technical logs: 30 days.</li>
+    <li>Worksheet copies: up to about three weeks.</li>
+    <li>Statistics: at most 14 months for data linked to individual installations. Aggregated reports may be kept longer.</li>
+</ul>
+
+<h2>7. Deletion and your rights</h2>
+<ul>
+    <li>You can delete a child profile and its history in the app.</li>
+    <li>To delete server data, email us. If you bought tokens, include the order number, date and package from your Apple receipt. Without them we may be unable to find the record, because we do not know who you are. Deleting the balance also removes unused tokens.</li>
+    <li>You have the right to access, rectification, erasure, restriction, portability and objection. You can stop data collection by uninstalling the app.</li>
+    <li>You may lodge a complaint with the Bulgarian Commission for Personal Data Protection: <a href="https://cpdp.bg">cpdp.bg</a></li>
+</ul>
+
+<h2>8. Children</h2>
+<p>The app is meant to be used by a parent or guardian. It has no registration, ads, chat or content publishing. If you believe we have received a child's personal data, contact us and we will delete it.</p>
+
+<h2>9. Security</h2>
+<p>The connection to the server is encrypted (HTTPS). Only the server can change balances. No system is completely secure.</p>
+
+<h2>10. AI-generated content</h2>
+<p>Questions, answers and explanations are generated by artificial intelligence and may contain errors. We recommend that a parent checks them.</p>
+
+<h2>11. Changes and contact</h2>
+<p>When this policy changes, we update the date at the top.<br><strong>Email:</strong> <a href="mailto:svilenkirchev2@gmail.com">svilenkirchev2@gmail.com</a></p>
+
+</div>
+</body>
+</html>
